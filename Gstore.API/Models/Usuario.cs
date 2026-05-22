@@ -13,7 +13,7 @@ namespace Gstore.API.Models;
        [StringLength(50)]
        public string Nome { get; set; }
        [DataType(DataType.Date)]
-       public DataType? DataNascimento { get; set; }
+       public DateTime? DataNascimento { get; set; }
        [StringLength(300)]
        public string Foto { get; set; } 
     }
