@@ -1,3 +1,4 @@
+using Gstore.API.Data.Seeds;
 using Gstore.API.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -27,6 +28,15 @@ namespace Gstore.API.Data;
         builder.Entity<IdentityUserClaim<string>>().ToTable("usuario_regras");
         builder.Entity<IdentityRoleClaim<string>>().ToTable("perfil_regras");
         #endregion
+
+        #region  Mock de dados 
+        SeedCategoria  seedCategoria = new(builder);
+        SeedProduto seedProduto = new(builder);
+        SeedUsuario seedUsuario = new(builder);
+        #endregion
+
+        
+
     }
 
     }
